@@ -5,4 +5,4 @@
   tasks:
 
   - name: Hello World!
-    shell: echo "Hi! {{ lookup('env', 'logged_in_user') }} !!!!!!!!!!!!!!!! &&&&&&&&&&&&&&&&&&&&&Tower is working!"
+    shell: echo "Hi! {{ lookup('env', 'logged_in_user') }} !!!!!!!!!!!!!!!! {{ ansible_env.logged_in_user }} Tower is working!"
