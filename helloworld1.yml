@@ -10,3 +10,7 @@
   - name: Printing all the environment​ variables in Ansible
     debug:
       msg: "{{ ansible_env }}"
+      
+  - name: Printing extra variables in Ansible
+    debug:
+      msg: "{{ logged_in_user }}"
