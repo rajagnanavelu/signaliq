@@ -1,8 +1,12 @@
 ---
 - name: Hello World!
   hosts: all
-
+  gather_facts: true
   tasks:
 
   - name: Hello World!
-    shell: echo "Hi! {{ lookup('env', 'logged_in_user') }} !!!!!!!!!!!!!!!! {{ ansible_env.logged_in_user }} Tower is working!"
+    shell: echo "Hi! {{ lookup('env', 'logged_in_user') }} !!!!!!!!!!!!!!!!  Tower is working!"
+    
+  - name: Printing all the environment​ variables in Ansible
+    debug:
+      msg: "{{ ansible_env }}"
