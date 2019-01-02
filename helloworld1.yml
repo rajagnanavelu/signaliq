@@ -1,0 +1,8 @@
+---
+- name: Hello World!
+  hosts: all
+
+  tasks:
+
+  - name: Hello World!
+    shell: echo "Hi! {{ lookup('env', 'logged_in_user') }} !!!!!!!!!!!!!!!! &&&&&&&&&&&&&&&&&&&&&Tower is working!"
