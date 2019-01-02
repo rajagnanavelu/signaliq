@@ -14,3 +14,7 @@
   - name: Printing extra variables in Ansible
     debug:
       msg: "{{ logged_in_user }}"
+      
+  - name: Printing extra variables from jenkin in Ansible
+    debug:
+      msg: "{{ logged_in_from_jenkin }}"
