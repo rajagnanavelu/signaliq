@@ -21,4 +21,4 @@
 
   - name: Printing environment variable
     debug:
-      msg: "{{ facts }}"
+      msg: "{{ lookup('env', 'facts') }}"
