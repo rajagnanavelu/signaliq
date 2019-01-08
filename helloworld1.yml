@@ -5,7 +5,7 @@
   tasks:
 
   - name: Hello World!
-    shell: echo "Hi! {{ lookup('env', 'logged_in_user') }} !!!!!!!!!!!!!!!!  {{ lookup('env', 'other_variable') }} Tower is working!"
+    shell: echo "Hi! {{ lookup('env', 'logged_in_user') }} !!!!!!!!!!!!!!!!  {{ lookup('env', 'facts') }} Tower is working!"
     
   - name: Printing all the environment​ variables in Ansible
     debug:
@@ -18,3 +18,7 @@
   - name: Printing extra variables from jenkin in Ansible
     debug:
       msg: "{{ logged_in_from_jenkin }}"
+
+  - name: Printing environment variable
+    debug:
+      msg: "{{ facts }}"
